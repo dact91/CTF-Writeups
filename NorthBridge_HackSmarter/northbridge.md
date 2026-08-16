@@ -12,14 +12,14 @@ _NorthBridge_ is a hard rated machine on the _HackSmarter_ platform. In order to
 
 ```mermaid
 graph TD
-    A["Cleartext Credentials Discovered"] --> B["Service User Compromised"]
-    B --> C["CREATE_CHILD Rights Abused<br>(Workstation Account Created)"]
-    C --> D["RBCD Executed via Excessive ACL Grant"]
-    D --> E["Host Compromised<br>(Local Administrator Access)"]
-    E --> F["DPAPI Credentials Recovered"]
-    F --> G["Domain-Privileged Account Compromised"]
-    G --> H["Sensitive Hives Accessed / Pass-the-Hash"]
-    H --> I["Full Domain Compromise"]
+    A["Cleartext Credentials<br>Discovered"] --> B["Service User<br>Compromised"]
+    B --> C["CREATE_CHILD<br>Rights Abused<br>(Workstation<br>Account Created)"]
+    C --> D["RBCD Executed<br>via Excessive<br>ACL Grant"]
+    D --> E["Host Compromised<br>(Local Administrator<br>Access)"]
+    E --> F["DPAPI Credentials<br>Recovered"]
+    F --> G["Domain-Privileged<br>Account<br>Compromised"]
+    G --> H["Sensitive Hives<br>Accessed /<br>Pass-the-Hash"]
+    H --> I["Full Domain<br>Compromise"]
     
     %% Class Definitions
     classDef discovery fill:#d4f1f9,stroke:#00a8cc,stroke-width:2px,color:#024b5e;
