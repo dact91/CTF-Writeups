@@ -7,6 +7,31 @@ _Orion_ is an easy rated Linux machine hosted on HTB.  Its compromise was achiev
 - Credential Management - database credentials were stored within the environment variable in cleartext, enabling me to access password hashes stored in the database. 
 - Weak password - the previously mentioned hashed password was alphabetic characters only, lacking numbers and special characters, 9 characters long only - which makes it susceptible to cracking, despite a relatively strong hashing algorithm.  Passwords should be set with appropriate complexity and length.
 - Vulnerable _telnet_ version - _telnet_'s version is vulnerable to an authentication bypass vulnerability which enabled me to obtain a session as `root`. Patch the version of GNU _inetutils_ to its latest release (2.8). 
+
+```
+graph TD
+    A["CMS Version<br>Disclosed<br>[cite: 2]"] --> B["Vulnerable CMS<br>Exploited (RCE)<br>[cite: 2]"]
+    B --> C["Initial Foothold<br>Achieved<br>[cite: 2]"]
+    C --> D["Cleartext DB<br>Credentials in Env<br>[cite: 2]"]
+    D --> E["Weak Password<br>Hash Cracked<br>[cite: 2]"]
+    E --> F["User Account<br>Compromised (adam)<br>[cite: 2]"]
+    F --> G["Vulnerable Telnet<br>Service Found<br>[cite: 2]"]
+    G --> H["Authentication<br>Bypass Executed<br>[cite: 2]"]
+    H --> I["Root System<br>Compromise<br>[cite: 2]"]
+    
+    %% Class Definitions
+    classDef discovery fill:#d4f1f9,stroke:#00a8cc,stroke-width:2px,color:#024b5e;
+    classDef exploitation fill:#ffe3b3,stroke:#ffa600,stroke-width:2px,color:#805300;
+    classDef compromise fill:#ffccd5,stroke:#ff0a54,stroke-width:2px,color:#800020;
+    classDef finalGoal fill:#380000,stroke:#ff0000,stroke-width:3px,color:#ffffff,stroke-dasharray: 5 5;
+    
+    %% Assigning Classes
+    class A,D,G discovery;
+    class B,H exploitation;
+    class C,E,F compromise;
+    class I finalGoal;
+```
+
 ---
 # Full TCP Range Scan
 
