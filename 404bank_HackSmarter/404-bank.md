@@ -35,31 +35,6 @@ graph TD
     class B,E exploit;
     class F root;
 ```
-
-```mermarid
-graph TD
-    A["Base64/MD5 Creds in Executable Cracked<br>for Initial User"] 
-    --> B["Chained ACL Abuse<br>Compromised Multiple Users["]
-    
-    B --> C["Cleartext Creds in Deleted Emails<br>Compromised Privileged User"]
-    
-    C --> D["Password-Protected Archive Cracked<br>& User Creds Recovered"]
-    
-    D --> E["ACL Abused to Enable<br>Disabled Privileged User"]
-    
-    E --> F["ADCS ESC4 Exploited -<br>Full Domain Compromise"]
-
-    %% Custom Color Scheme
-    classDef recon fill:#f3f4f6,stroke:#3b82f6,stroke-width:2px,color:#1f2937,rx:5,ry:5;
-    classDef exploit fill:#fdf2f8,stroke:#ec4899,stroke-width:2px,color:#831843,rx:5,ry:5;
-    classDef root fill:#14532d,stroke:#22c55e,stroke-width:3px,color:#f0fdf4,stroke-dasharray: 5 5,rx:5,ry:5;
-
-    %% Assigning Classes
-    class A,C,D recon;
-    class B,E exploit;
-    class F root;
-```
-
 ---
 # Introduction
 
