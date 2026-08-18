@@ -14,7 +14,7 @@ _404 Bank_ is a medium rated machine on the _HackSmarter_ platform. In order to 
 
 ```mermaid
 graph TD
-    A["Base64/MD5 Creds in Executable<br>Cracked for Initial User[cite: 3]"] --> B["Chained ACL Abuse<br>Compromised Multiple Users"]
+    A["Base64/MD5 Creds in Executable<br>Cracked for Initial User"] --> B["Chained ACL Abuse<br>Compromised Multiple Users"]
     B --> C["Cleartext Creds in Deleted Emails<br>Compromised Privileged User"]
     C --> D["Password-Protected Archive Cracked<br>Disabled User Creds Recovered"]
     D --> E["ACL Abused to Enable<br>Disabled Privileged User"]
