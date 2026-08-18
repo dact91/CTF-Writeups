@@ -7,6 +7,31 @@ _Midgarden2_ is a hard rated machine on the _HackSmarter_ platform. In order to 
 - ACL (_ForceChangePassword_) enabled lateral movement to a more privileged account. To mitigate that - periodical auditing of ACLs is recommended.
 - Excessive permissions in OU delegation (_BadSuccessor_) in the form of _CREATE_CHILD_ rights over an OU allowed for creation of a dMSA as a successor of _Domain Admins_ member. This vector allowed for privilege escalation. Removing _CREATE_CHILD_ should mitigate this vector, if possible.
 
+## Graphical Summary
+
+```mermaid
+graph TD
+    A["Cleartext Password<br>in User Description<br>"] 
+    --> B["ForceChangePassword<br>ACL Abused<br>"]
+    
+    B --> C["CREATE_CHILD Rights<br>Discovered Over OU<br>"]
+    
+    C --> D["BadSuccessor Attack<br>Executed for dMSA<br>"]
+    
+    D --> E["Forged Service<br>Ticket & DCSync<br>"]
+    
+    E --> F["Full Domain Compromise<br>&<br>Pass-the-Hash<br>"]
+
+    %% Custom Color Scheme
+    classDef recon fill:#f3f4f6,stroke:#3b82f6,stroke-width:2px,color:#1f2937,rx:5,ry:5;
+    classDef exploit fill:#fdf2f8,stroke:#ec4899,stroke-width:2px,color:#831843,rx:5,ry:5;
+    classDef root fill:#14532d,stroke:#22c55e,stroke-width:3px,color:#f0fdf4,stroke-dasharray: 5 5,rx:5,ry:5;
+
+    %% Assigning Classes
+    class A,C recon;
+    class B,D,E exploit;
+    class F root;
+```
 ---
 # Introduction
 
