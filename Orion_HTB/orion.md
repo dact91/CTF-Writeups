@@ -8,7 +8,7 @@ _Orion_ is an easy rated Linux machine hosted on HTB.  Its compromise was achiev
 - Weak password - the previously mentioned hashed password was alphabetic characters only, lacking numbers and special characters, 9 characters long only - which makes it susceptible to cracking, despite a relatively strong hashing algorithm.  Passwords should be set with appropriate complexity and length.
 - Vulnerable _telnet_ version - _telnet_'s version is vulnerable to an authentication bypass vulnerability which enabled me to obtain a session as `root`. Patch the version of GNU _inetutils_ to its latest release (2.8). 
 
-```mermaid.js
+```mermaid
 graph TD
     A["CMS Version<br>Disclosed"] --> B["RCE Vulnerable CMS Exploit,<br>Obtained Foothold"]
     B --> C["Cleartext DB Creds,<br>DB Enumeration"]
