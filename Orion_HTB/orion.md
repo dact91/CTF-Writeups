@@ -10,26 +10,21 @@ _Orion_ is an easy rated Linux machine hosted on HTB.  Its compromise was achiev
 
 ```mermaid.js
 graph TD
-    A["CMS Version<br>Disclosed<br>"] --> B["Vulnerable CMS<br>Exploited (RCE), Foothold Acheived<br>[cite: 2]"]
-    B --> C["Initial Foothold<br>Achieved<br>"]
-    C --> D["Cleartext DB<br>Credentials in Env<br>"]
-    D --> E["Weak Password<br>Hash Cracked<br>"]
-    E --> F["User Account<br>Compromised (adam)<br>[cite: 2]"]
-    F --> G["Vulnerable Telnet<br>Service Found<br>[cite: 2]"]
-    G --> H["Authentication<br>Bypass Executed<br>[cite: 2]"]
-    H --> I["Root System<br>Compromise<br>[cite: 2]"]
-    
-    %% Class Definitions
-    classDef discovery fill:#d4f1f9,stroke:#00a8cc,stroke-width:2px,color:#024b5e;
-    classDef exploitation fill:#ffe3b3,stroke:#ffa600,stroke-width:2px,color:#805300;
-    classDef compromise fill:#ffccd5,stroke:#ff0a54,stroke-width:2px,color:#800020;
-    classDef finalGoal fill:#380000,stroke:#ff0000,stroke-width:3px,color:#ffffff,stroke-dasharray: 5 5;
-    
+    A["CMS Version<br>Disclosed"] --> B["RCE Vulnerable CMS Exploit,<br>Obtained Foothold"]
+    B --> C["Cleartext DB Creds,<br>DB Enumeration"]
+    C --> D["Weak Password Hash Cracking<br>to Compromise User"]
+    D --> E["Vulnerable Telnet Service<br>Allowed Auth Bypass"]
+    E --> F["Root Execution -<br>System Compromise"]
+
+    %% Custom Color Scheme
+    classDef recon fill:#f3f4f6,stroke:#3b82f6,stroke-width:2px,color:#1f2937,rx:5,ry:5;
+    classDef exploit fill:#fdf2f8,stroke:#ec4899,stroke-width:2px,color:#831843,rx:5,ry:5;
+    classDef root fill:#14532d,stroke:#22c55e,stroke-width:3px,color:#f0fdf4,stroke-dasharray: 5 5,rx:5,ry:5;
+
     %% Assigning Classes
-    class A,D,G discovery;
-    class B,H exploitation;
-    class C,E,F compromise;
-    class I finalGoal;
+    class A,C,E recon;
+    class B,D exploit;
+    class F root;
 ```
 
 ---
