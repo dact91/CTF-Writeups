@@ -14,11 +14,16 @@ _404 Bank_ is a medium rated machine on the _HackSmarter_ platform. In order to 
 
 ```mermaid
 graph TD
-    A["Base64/MD5 Creds in Executable<br>Cracked for Initial User"] --> B["Chained ACL Abuse<br>Compromised Multiple Users"]
-    B --> C["Cleartext Creds in Deleted Emails<br>Compromised Privileged User"]
-    C --> D["Password-Protected Archive Cracked<br>Disabled User Creds Recovered"]
-    D --> E["ACL Abused to Enable<br>Disabled Privileged User"]
-    E --> F["ADCS ESC4 Exploited -<br>Full Domain Compromise"]
+    A["Base64/MD5<br>Creds in<br>Executable<br>Cracked for<br>Initial User<br>"] 
+    --> B["Chained<br>ACL Abuse<br>Compromised<br>Multiple Users<br>"]
+    
+    B --> C["Cleartext<br>Creds in<br>Deleted Emails<br>Compromised<br>Privileged User<br>"]
+    
+    C --> D["Password-<br>Protected<br>Archive<br>Cracked &<br>User Creds<br>Recovered<br>"]
+    
+    D --> E["ACL Abused<br>to Enable<br>Disabled<br>Privileged User<br>"]
+    
+    E --> F["ADCS ESC4<br>Exploited -<br>Full Domain<br>Compromise<br>"]
 
     %% Custom Color Scheme
     classDef recon fill:#f3f4f6,stroke:#3b82f6,stroke-width:2px,color:#1f2937,rx:5,ry:5;
