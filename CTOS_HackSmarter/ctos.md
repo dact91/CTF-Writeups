@@ -17,8 +17,8 @@ graph TD
     KALI -->|"①<br>SQLi auth bypass &<br>deserialization RCE →<br>Symlink & disk PrivEsc"| WEB
     WEB -->|"②<br>Post-Exploit Enum<br>→ NTLM hash<br>→ AD Enum"| DC
     WEB -->|"③<br>SMB access →<br>Initial Password<br>Requirements<br>→ Password Spray<br>→ Obtained Valid Creds → WinRM"| WS
-    WS -->|"④<br>Service Hijacking PrivEsc<br>w/ Evasion → SYSTEM<br>→ Cracked KeePass DB"| WS
-    WS ==>|"⑤<br>Chained ACL Exploitation<br>→ GPO abuse<br>→ Privilege Escalation →<br>Dump NTDS.dit"| DC
+    WS -->|"④<br>Service<br>Hijacking<br>w/ Evasion<br>→ SYSTEM<br>→ Cracked KeePass DB"| WS
+    WS ==>|"⑤<br>Chaining ACLs<br>→ GPO abuse<br>→Dump NTDS.dit"| DC
 
     classDef default fill:transparent,stroke:#5b7fa6,stroke-width:1.5px;
     classDef attacker fill:transparent,stroke:#4a90d9,stroke-width:2px;
