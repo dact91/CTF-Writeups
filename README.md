@@ -32,6 +32,7 @@ Writeups documenting my hands-on offensive security practice — enumeration, ex
 
 - [BitStream](WindowsAD_Ranges/BitStream_HackSmarter/bitstream.md) — HackSmarter, Easy
 - [CTOS](WindowsAD_Ranges/CTOS_HackSmarter/ctos.md) — HackSmarter, Medium
+- [Forensics](WindowsAD_Ranges/Forensics_HackSmarter/forensics.md) — HackSmarter, Medium
 
 </details>
 
@@ -52,6 +53,7 @@ Writeups documenting my hands-on offensive security practice — enumeration, ex
 | Building Magic _(coming soon)_ | HackSmarter | Windows AD | ![Easy](https://img.shields.io/badge/-Easy-brightgreen) | _Pending publication_ | _Pending publication_ |
 | [BitStream](WindowsAD_Ranges/BitStream_HackSmarter/bitstream.md) | HackSmarter | Windows AD | ![Easy](https://img.shields.io/badge/-Easy-brightgreen) | IDOR, DCSync | An inbox IDOR ultimately chained into a full DCSync. |
 | [CTOS](WindowsAD_Ranges/CTOS_HackSmarter/ctos.md) | HackSmarter | Windows AD | ![Medium](https://img.shields.io/badge/-Medium-orange) | Deserialization RCE, GPO abuse | A cracked KeePass vault fed an ACL chain into a GPO-based domain takeover. |
+| [Forensics](WindowsAD_Ranges/Forensics_HackSmarter/forensics.md) | HackSmarter | Windows AD | ![Medium](https://img.shields.io/badge/-Medium-orange) | GenericWrite/Kerberoast, LSASS dumping, ticket reuse | A domain-admin Kerberos ticket left over from a prior assessment handed over the domain outright. |
 
 ---
 
