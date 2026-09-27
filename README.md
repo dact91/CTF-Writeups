@@ -18,6 +18,13 @@ Writeups documenting my hands-on offensive security practice — enumeration, ex
 </details>
 
 <details>
+<summary><strong>Windows</strong></summary>
+
+- [New Hire](Windows/NewHire_HackSmarter/newhire.md) — HackSmarter, Easy
+
+</details>
+
+<details>
 <summary><strong>Windows AD</strong></summary>
 
 - [ShadowGate 2](WindowsAD/ShadowGate2_HackSmarter/shadowgate-2.md) — HackSmarter, Medium
@@ -48,6 +55,7 @@ Writeups documenting my hands-on offensive security practice — enumeration, ex
 | [Walnut](Linux/Walnut_HackSmarter/walnut.md) | HackSmarter | Linux | ![Easy](https://img.shields.io/badge/-Easy-brightgreen) | LDAP creds, NFS misconfig | Rewrote `/etc/shadow` remotely via a permissive NFS export. |
 | [Casino](Linux/Casino_HackSmarter/casino.md) | HackSmarter | Linux | ![Medium](https://img.shields.io/badge/-Medium-orange) | SSTI, credential chain | SSTI-based file read led straight to a private SSH key. |
 | [Haystack](Linux/Haystack_HackSmarter/haystack.md) | HackSmarter | Linux | ![Medium](https://img.shields.io/badge/-Medium-orange) | Cracked archive, RoundCube RCE, sudo git escape | A `sudo git diff` wildcard rule leaked into `less`, which shell-escaped straight to root. |
+| [New Hire](Windows/NewHire_HackSmarter/newhire.md) | HackSmarter | Windows | ![Easy](https://img.shields.io/badge/-Easy-brightgreen) | KeePass cracking, MSSQL impersonation, SeImpersonate | An impersonation right on the SQL service quietly opened the door from a guest SMB share to SYSTEM. |
 | [ShadowGate 2](WindowsAD/ShadowGate2_HackSmarter/shadowgate-2.md) | HackSmarter | Windows AD | ![Medium](https://img.shields.io/badge/-Medium-orange) | SQLi, ACL abuse, ADCS ESC3 | Revived a deleted account and forged a certificate to take the domain. |
 | [404 Bank](WindowsAD/404bank_HackSmarter/404-bank.md) | HackSmarter | Windows AD | ![Medium](https://img.shields.io/badge/-Medium-orange) | ACL chaining, ADCS ESC4 | Chained ACLs to re-enable a disabled account, then template-hijacked ADCS. |
 | [Midgarden 2](WindowsAD/Midgraden2_HackSmarter/midgarden-2.md) | HackSmarter | Windows AD | ![Hard](https://img.shields.io/badge/-Hard-red) | BadSuccessor, DCSync | Used the newly-disclosed BadSuccessor dMSA attack to DCSync the domain. |
@@ -63,6 +71,7 @@ Writeups documenting my hands-on offensive security practice — enumeration, ex
 
 ```
 ├── Linux/                      # Standalone Linux machines
+├── Windows/                    # Standalone Windows machines (non-domain)
 ├── WindowsAD/                  # Single-host Windows AD machines
 ├── WindowsAD_Ranges/           # Multi-host Windows AD environments
 │
