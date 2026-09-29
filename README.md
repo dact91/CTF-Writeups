@@ -14,6 +14,7 @@ Writeups documenting my hands-on offensive security practice — enumeration, ex
 - [Walnut](Linux/Walnut_HackSmarter/walnut.md) — HackSmarter, Easy
 - [Casino](Linux/Casino_HackSmarter/casino.md) — HackSmarter, Medium
 - [Haystack](Linux/Haystack_HackSmarter/haystack.md) — HackSmarter, Medium
+- [Wordplay](Linux/Wordplay_HackSmarter/wordplay.md) — HackSmarter, Medium
 
 </details>
 
@@ -41,6 +42,7 @@ Writeups documenting my hands-on offensive security practice — enumeration, ex
 - [BitStream](WindowsAD_Ranges/BitStream_HackSmarter/bitstream.md) — HackSmarter, Easy
 - [CTOS](WindowsAD_Ranges/CTOS_HackSmarter/ctos.md) — HackSmarter, Medium
 - [Forensics](WindowsAD_Ranges/Forensics_HackSmarter/forensics.md) — HackSmarter, Medium
+- [Triathlon](WindowsAD_Ranges/Triathlon_HackSmarter/triathlon.md) — HackSmarter, Hard
 
 </details>
 
@@ -55,6 +57,7 @@ Writeups documenting my hands-on offensive security practice — enumeration, ex
 | [Walnut](Linux/Walnut_HackSmarter/walnut.md) | HackSmarter | Linux | ![Easy](https://img.shields.io/badge/-Easy-brightgreen) | LDAP creds, NFS misconfig | Rewrote `/etc/shadow` remotely via a permissive NFS export. |
 | [Casino](Linux/Casino_HackSmarter/casino.md) | HackSmarter | Linux | ![Medium](https://img.shields.io/badge/-Medium-orange) | SSTI, credential chain | SSTI-based file read led straight to a private SSH key. |
 | [Haystack](Linux/Haystack_HackSmarter/haystack.md) | HackSmarter | Linux | ![Medium](https://img.shields.io/badge/-Medium-orange) | Cracked archive, RoundCube RCE, sudo git escape | A `sudo git diff` wildcard rule leaked into `less`, which shell-escaped straight to root. |
+| [Wordplay](Linux/Wordplay_HackSmarter/wordplay.md) | HackSmarter | Linux | ![Medium](https://img.shields.io/badge/-Medium-orange) | WordPress LFI, writable NFS, ansible-playbook abuse | Chained a writable NFS share into a WordPress plugin's LFI to plant and trigger a PHP shell. |
 | [New Hire](Windows/NewHire_HackSmarter/newhire.md) | HackSmarter | Windows | ![Easy](https://img.shields.io/badge/-Easy-brightgreen) | KeePass cracking, MSSQL impersonation, SeImpersonate | An impersonation right on the SQL service quietly opened the door from a guest SMB share to SYSTEM. |
 | [ShadowGate 2](WindowsAD/ShadowGate2_HackSmarter/shadowgate-2.md) | HackSmarter | Windows AD | ![Medium](https://img.shields.io/badge/-Medium-orange) | SQLi, ACL abuse, ADCS ESC3 | Revived a deleted account and forged a certificate to take the domain. |
 | [404 Bank](WindowsAD/404bank_HackSmarter/404-bank.md) | HackSmarter | Windows AD | ![Medium](https://img.shields.io/badge/-Medium-orange) | ACL chaining, ADCS ESC4 | Chained ACLs to re-enable a disabled account, then template-hijacked ADCS. |
@@ -64,6 +67,7 @@ Writeups documenting my hands-on offensive security practice — enumeration, ex
 | [BitStream](WindowsAD_Ranges/BitStream_HackSmarter/bitstream.md) | HackSmarter | Windows AD | ![Easy](https://img.shields.io/badge/-Easy-brightgreen) | IDOR, DCSync | An inbox IDOR ultimately chained into a full DCSync. |
 | [CTOS](WindowsAD_Ranges/CTOS_HackSmarter/ctos.md) | HackSmarter | Windows AD | ![Medium](https://img.shields.io/badge/-Medium-orange) | Deserialization RCE, GPO abuse | A cracked KeePass vault fed an ACL chain into a GPO-based domain takeover. |
 | [Forensics](WindowsAD_Ranges/Forensics_HackSmarter/forensics.md) | HackSmarter | Windows AD | ![Medium](https://img.shields.io/badge/-Medium-orange) | GenericWrite/Kerberoast, LSASS dumping, ticket reuse | A domain-admin Kerberos ticket left over from a prior assessment handed over the domain outright. |
+| [Triathlon](WindowsAD_Ranges/Triathlon_HackSmarter/triathlon.md) | HackSmarter | Windows AD | ![Hard](https://img.shields.io/badge/-Hard-red) | AS-REP Kerberoast, NTLM relay, ADCS Golden Certificate | An AS-REP roastable account with no cracked password still supplied the SPN needed to blind-Kerberoast the way in. |
 
 ---
 
