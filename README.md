@@ -33,6 +33,7 @@ Writeups documenting my hands-on offensive security practice — enumeration, ex
 - [Midgarden 2](WindowsAD/Midgraden2_HackSmarter/midgarden-2.md) — HackSmarter, Hard
 - [NorthBridge](WindowsAD/NorthBridge_HackSmarter/northbridge.md) — HackSmarter, Hard
 - [NanoCorp](WindowsAD/NanoCorp_HTB/nanocorp.md) — HTB, Hard
+- [Certificate](WindowsAD/Certificate_HTB/certificate.md) — HTB, Hard
 - Building Magic — HackSmarter, Easy _(coming soon)_
 
 </details>
@@ -65,6 +66,7 @@ Writeups documenting my hands-on offensive security practice — enumeration, ex
 | [Midgarden 2](WindowsAD/Midgraden2_HackSmarter/midgarden-2.md) | HackSmarter | Windows AD | ![Hard](https://img.shields.io/badge/-Hard-red) | BadSuccessor, DCSync | Used the newly-disclosed BadSuccessor dMSA attack to DCSync the domain. |
 | [NorthBridge](WindowsAD/NorthBridge_HackSmarter/northbridge.md) | HackSmarter | Windows AD | ![Hard](https://img.shields.io/badge/-Hard-red) | RBCD, DPAPI extraction | Bypassed a hardened Machine Account Quota to pull off RBCD anyway. |
 | [NanoCorp](WindowsAD/NanoCorp_HTB/nanocorp.md) | HTB | Windows AD | ![Hard](https://img.shields.io/badge/-Hard-red) | NTLM leak CVE, ACL chaining, Checkmk LPE CVE | A file upload form leaking an NTLM hash through a Windows library-file CVE was the opening move toward full domain compromise. |
+| [Certificate](WindowsAD/Certificate_HTB/certificate.md) | HTB | Windows AD | ![Hard](https://img.shields.io/badge/-Hard-red) | Null-byte upload bypass, ADCS ESC3, SeManageVolumePrivilege | Abused a privilege meant for routine disk maintenance to pull the CA's private key and forge a Golden Certificate. |
 | Building Magic _(coming soon)_ | HackSmarter | Windows AD | ![Easy](https://img.shields.io/badge/-Easy-brightgreen) | _Pending publication_ | _Pending publication_ |
 | [BitStream](WindowsAD_Ranges/BitStream_HackSmarter/bitstream.md) | HackSmarter | Windows AD | ![Easy](https://img.shields.io/badge/-Easy-brightgreen) | IDOR, DCSync | An inbox IDOR ultimately chained into a full DCSync. |
 | [CTOS](WindowsAD_Ranges/CTOS_HackSmarter/ctos.md) | HackSmarter | Windows AD | ![Medium](https://img.shields.io/badge/-Medium-orange) | Deserialization RCE, GPO abuse | A cracked KeePass vault fed an ACL chain into a GPO-based domain takeover. |
